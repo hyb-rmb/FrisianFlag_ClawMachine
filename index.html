@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Mesin Capit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="viewport-sizer" id="viewportSizer">
+        <div class="creative-slot" id="creativeSlot">
+            <div id="ad-root" aria-label="Game mesin capit">
+                <div class="screen">
+                    <main class="machine-wrap">
+                        <div class="canvas-shell">
+                            <div class="canvas-scale">
+                                <div class="canvas-inner" id="canvasInner">
+                                    <canvas id="game" width="320" height="480"
+                                        aria-label="Area permainan mesin capit"></canvas>
+                                    <div class="canvas-fx" aria-hidden="true"></div>
+                                </div>
+                            </div>
+
+                            <!-- Kontrol overlay di dalam area BG.jpg -->
+                            <div class="controls-overlay">
+                                <div class="joystick-unit" id="joystick" role="slider"
+                                    aria-label="Geser kiri kanan untuk mengarahkan capit" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuenow="50" tabindex="0">
+                                    <img src="assets/btn_toggle.png" alt="Joystick" draggable="false"
+                                        class="joystick-img">
+                                </div>
+                                <button type="button" id="btn-drop" class="main-btn" aria-label="Capit">
+                                    <img src="assets/btn_capit.png" alt="CAPIT" draggable="false">
+                                </button>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- Popup menang: KALSIUM, OMEGA, MINERAL, VITAMIN, ZINC -->
+                <div id="popupWin" class="prize-popup hidden" role="dialog" aria-modal="true">
+                    <div class="prize-popup-backdrop" id="popupWinClose" aria-hidden="true"></div>
+                    <div class="prize-popup-win-wrap">
+                        <img src="assets/end_card.jpg" alt="Selamat!" class="prize-popup-endcard" draggable="false">
+                        <a href="https://www.frisianflag.com/produk/susu-siap-minum/kids" target="_blank"
+                            rel="noopener noreferrer" class="cta-btn" id="ctaBtn">
+                            <img src="assets/btn_cta.png" alt="Lihat Produk" draggable="false">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popup retry: GULA, LEMAK, PERASA, NATRIUM -->
+                <div id="popupRetry" class="prize-popup hidden" role="dialog" aria-modal="true">
+                    <div class="prize-popup-backdrop" aria-hidden="true"></div>
+                    <div class="prize-popup-retry-wrap">
+                        <img src="assets/Retry.png" alt="Coba Lagi" class="prize-popup-endcard" draggable="false">
+                        <button type="button" id="btnRetry" class="retry-btn">
+                            <img src="assets/btn_retry.png" alt="Bermain Kembali" draggable="false">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sparkles" aria-hidden="true">
+                    <span style="top:18%;left:12%;animation-delay:0s"></span>
+                    <span style="top:26%;left:82%;animation-delay:.7s"></span>
+                    <span style="top:41%;left:22%;animation-delay:1.2s"></span>
+                    <span style="top:58%;left:74%;animation-delay:.3s"></span>
+                    <span style="top:72%;left:14%;animation-delay:1.6s"></span>
+                    <span style="top:80%;left:64%;animation-delay:2s"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
